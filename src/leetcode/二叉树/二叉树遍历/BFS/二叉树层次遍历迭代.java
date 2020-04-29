@@ -1,4 +1,4 @@
-package leetcode.二叉树.二叉树遍历;
+package leetcode.二叉树.二叉树遍历.BFS;
 
 import java.util.*;
 

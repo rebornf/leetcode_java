@@ -1,6 +1,5 @@
 package leetcode.二叉树;
 
-import com.sun.source.tree.BinaryTree;
 
 /**
  * @Author fty
