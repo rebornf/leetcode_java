@@ -12,5 +12,29 @@ package leetcode.岛屿;
  * @Date 2020/4/26 21:14
  * @Version V1.0
  **/
-public class 统计封闭岛屿的数目1254 {
-}
+/**
+ * public class 统计封闭岛屿的数目1254 {
+ * <p>
+ * private int[][]  dirArr =new int[][] {{1,0},{0,1},{-1,0},{0,-1}};
+ * <p>
+ * <p>
+ * <p>
+ * //岛屿的DFS
+ * private int dfs(int[][]  grid,int r ,int c){
+ * if (!inArea(grid, r, c)){
+ * return 0;
+ * }
+ * int res  =1;
+ * //if (grid)
+ * }
+ * <p>
+ * <p>
+ * //判断岛屿是否在矩阵的里面，如果在边缘，则不是封闭岛屿
+ * private boolean inArea(int[][]  grid,int  r,int c) {
+ * if (r >= 0 && r < grid.length && c >= 0 && c < grid[0].length);
+ * return true;
+ * }
+ * <p>
+ * <p>
+ * }
+ */

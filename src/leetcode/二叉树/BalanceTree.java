@@ -6,6 +6,7 @@ package leetcode.二叉树;
  * @Date 2020/4/3 13:02
  * @Version V1.0
  **/
+/*
 public class BalanceTree {
     public static void main(String[] args) {
 
@@ -39,3 +40,5 @@ public class BalanceTree {
         }
     }
 }
+*/
+
