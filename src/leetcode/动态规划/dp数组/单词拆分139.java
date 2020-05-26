@@ -1,5 +1,6 @@
 package leetcode.动态规划.dp数组;
 
+import java.awt.datatransfer.StringSelection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -18,7 +19,7 @@ public class 单词拆分139 {
 
 
     //方法1暴力法
-    public boolean wordbreak(String s, List<String> wordDict) {
+    public boolean wordbreak1(String s, List<String> wordDict) {
         return word_break(s, (List<String>) new HashSet(wordDict), 0);
     }
 
@@ -94,6 +95,21 @@ public class 单词拆分139 {
 
 
     //方法3  使用动态规划
+
+    public boolean wordBreak3(String s, List<String> worddict) {
+        HashSet<String> set = new HashSet<>(worddict);
+        boolean[] dp = new boolean[s.length() + 1];
+        dp[0] = true;
+        for (int i = 1; i < s.length(); i++) {
+            for (int j = 0; j < i; j++) {
+                if (dp[j] && worddict.contains(s.substring(j, i))) {
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+        return dp[s.length()];
+    }
 
 
 }

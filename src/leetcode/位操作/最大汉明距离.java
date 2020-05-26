@@ -1,4 +1,4 @@
-package leetcode.面试.美团;
+package leetcode.位操作;
 
 import java.util.Scanner;
 
@@ -24,11 +24,6 @@ public class 最大汉明距离 {
         }
         System.out.println(res);
     }
-//    //布莱恩 可莱尼算法
-//    这是布赖恩·克尼根位计数算法的基本思想。该算法使用特定比特位和算术运算移除等于 1 的最右比特位。
-//
-//    当我们在 number 和 number-1 上做 AND 位运算时，原数字 number 的最右边等于 1 的比特会被移除。
-
 
     public static int hanMingDistance(int x, int y) {
         int hanming = x ^ y;
@@ -38,9 +33,5 @@ public class 最大汉明距离 {
             cnt++;
         }
         return cnt;
-    }
-
-    public static int hanMingDistance2(int x, int y) {
-        return Integer.bitCount(x ^ y);
     }
 }

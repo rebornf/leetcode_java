@@ -1,4 +1,4 @@
-package leetcode.链表;
+package leetcode.閾捐〃;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import java.util.List;
  * @Date 2020/5/14 18:30
  * @Version V1.0
  **/
-public class 反转链表 {
+public class 鍙嶈浆閾捐〃 {
     public static void main(String[] args) {
 
     }

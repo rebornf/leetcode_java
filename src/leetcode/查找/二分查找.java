@@ -1,4 +1,4 @@
-package leetcode.查找;
+package leetcode.鏌ユ壘;
 
 import java.util.Arrays;
 
@@ -8,7 +8,7 @@ import java.util.Arrays;
  * @Date 2020/5/14 18:13
  * @Version V1.0
  **/
-public class 二分查找 {
+public class 浜屽垎鏌ユ壘 {
     public static void main(String[] args) {
         int[] arr = {30, 20, 50, 10, 80, 9, 7, 12, 100, 40, 8};
         Arrays.sort(arr);

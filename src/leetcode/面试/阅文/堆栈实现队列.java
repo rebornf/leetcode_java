@@ -1,14 +1,8 @@
-package leetcode.面试.美团;
+package leetcode.面试.阅文;
 
 import java.util.Scanner;
 
-/**
- * @Author fty
- * @Description TODO
- * @Date 2020/5/12 11:56
- * @Version V1.0
- **/
-public class 拆分 {
+public class 堆栈实现队列 {
 
     static String str = "";
     static int k = -1;
@@ -39,4 +33,3 @@ public class 拆分 {
         return 0;
     }
 }
-
