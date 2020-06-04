@@ -26,8 +26,7 @@ public class 快速排序 {
     // 快速排序
     void QuickSort(int arr[], int start, int end)
     {
-        if (start >= end)
-            return;
+        if (start >= end) return;
         int i = start;
         int j = end;
         // 基准数
@@ -35,22 +34,19 @@ public class 快速排序 {
         while (i < j)
         {
             // 从右向左找比基准数小的数
-            while (i < j && arr[j] >= baseval)
-            {
+            while (i < j && arr[j] >= baseval) {
                 j--;
             }
-            if (i < j)
-            {
+            if (i < j) {
                 arr[i] = arr[j];
                 i++;
             }
             // 从左向右找比基准数大的数
-            while (i < j && arr[i] < baseval)
-            {
+            while (i < j && arr[i] < baseval) {
+
                 i++;
             }
-            if (i < j)
-            {
+            if (i < j) {
                 arr[j] = arr[i];
                 j--;
             }

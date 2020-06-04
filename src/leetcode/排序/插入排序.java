@@ -18,10 +18,9 @@ public class 插入排序 {
 
     }
     // 插入排序
-    void InsertSort(int arr[], int length)
-    {
-        for (int i = 1; i < length; i++)
-        {
+    void InsertSort(int arr[], int length) {
+        for (int i = 1; i < length; i++) {
+
             int j;
             if (arr[i] < arr[i - 1])
             {
