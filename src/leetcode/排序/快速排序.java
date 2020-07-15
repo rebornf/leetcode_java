@@ -19,6 +19,15 @@ package leetcode.排序;
  * 接着从low所指向的位置向后搜索直到找到一个大于baseval的记录并互相交换，重复这两个步骤直到low=high为止。
  * ————————————————
  */
+
+ /*
+ * @Description: 快速排序是不稳定吗，怎么设计与一个稳定的快排
+ *
+ * @Param:
+ * @return:
+ * @Author: fty
+ * @Date:
+ */
 public class 快速排序 {
     public static void main(String[] args) {
 

@@ -2,7 +2,7 @@ package leetcode.双指针; /**
  * Created with IntelliJ IDEA By fty on 2020/5/30
  */
 
-import sun.plugin2.ipc.windows.WindowsIPCFactory;
+
 
 import java.util.Scanner;
 

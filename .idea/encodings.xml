@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/src/DataStructure/Array/Array_crossborder.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/DataStructure/Stack/ArrayStack.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/leetcode/二叉树/BalanceTree.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/leetcode/二叉树/二叉搜索树/二叉搜索树的最近公共祖先.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/leetcode/位操作/最大汉明距离.java" charset="UTF-8" />
@@ -37,6 +39,6 @@
     <file url="file://$PROJECT_DIR$/src/leetcode/面试/阅文/二进制.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/leetcode/面试/阅文/堆栈实现队列.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/leetcode/面试/阅文/时间差.java" charset="UTF-8" />
-    <file url="PROJECT" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
