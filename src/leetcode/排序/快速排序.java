@@ -32,38 +32,56 @@ public class 快速排序 {
     public static void main(String[] args) {
 
     }
-    // 快速排序
-    void QuickSort(int arr[], int start, int end)
-    {
-        if (start >= end) return;
-        int i = start;
-        int j = end;
-        // 基准数
-        int baseval = arr[start];
-        while (i < j)
-        {
-            // 从右向左找比基准数小的数
-            while (i < j && arr[j] >= baseval) {
-                j--;
-            }
-            if (i < j) {
-                arr[i] = arr[j];
-                i++;
-            }
-            // 从左向右找比基准数大的数
-            while (i < j && arr[i] < baseval) {
 
-                i++;
-            }
-            if (i < j) {
-                arr[j] = arr[i];
-                j--;
-            }
-        }
-        // 把基准数放到i的位置
-        arr[i] = baseval;
-        // 递归
-        QuickSort(arr, start, i - 1);
-        QuickSort(arr, i + 1, end);
+
+    /**
+     * 快速排序方法
+     * @param array
+     * @param start
+     * @param end
+     * @return
+     */
+    public static int[] QuickSort(int[] array, int start, int end) {
+        if (array.length < 1 || start < 0 || end >= array.length || start > end) return null;
+        int smallIndex = partition(array, start, end);
+        if (smallIndex > start)
+            QuickSort(array, start, smallIndex - 1);
+        if (smallIndex < end)
+            QuickSort(array, smallIndex + 1, end);
+        return array;
     }
+    /**
+     * 快速排序算法——partition
+     * @param array
+     * @param start
+     * @param end
+     * @return
+     */
+    public static int partition(int[] array, int start, int end) {
+        int pivot = (int) (start + Math.random() * (end - start + 1));
+        int smallIndex = start - 1;
+        swap(array, pivot, end);
+        for (int i = start; i <= end; i++)
+            if (array[i] <= array[end]) {
+                smallIndex++;
+                if (i > smallIndex)
+                    swap(array, i, smallIndex);
+            }
+        return smallIndex;
+    }
+
+    /**
+     * 交换数组内两个元素
+     * @param array
+     * @param i
+     * @param j
+     */
+    public static void swap(int[] array, int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
+
+
 }

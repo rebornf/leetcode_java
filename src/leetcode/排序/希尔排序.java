@@ -14,29 +14,28 @@ package leetcode.排序;
  */
 public class 希尔排序 {
     // 插入排序
-    void ShellSort(int arr[], int length)
-    {
-        int increasement = length;
-        int i, j, k;
-        do
-        {
-            // 确定分组的增量
-            increasement = increasement / 3 + 1;
-            for (i = 0; i < increasement; i++)
-            {
-                for (j = i + increasement; j < length; j += increasement)
-                {
-                    if (arr[j] < arr[j - increasement])
-                    {
-                        int temp = arr[j];
-                        for (k = j - increasement; k >= 0 && temp < arr[k]; k -= increasement)
-                        {
-                            arr[k + increasement] = arr[k];
-                        }
-                        arr[k + increasement] = temp;
-                    }
+
+    /**
+     * 希尔排序
+     *
+     * @param array
+     * @return
+     */
+    public static int[] ShellSort(int[] array) {
+        int len = array.length;
+        int temp, gap = len / 2;
+        while (gap > 0) {
+            for (int i = gap; i < len; i++) {
+                temp = array[i];
+                int preIndex = i - gap;
+                while (preIndex >= 0 && array[preIndex] > temp) {
+                    array[preIndex + gap] = array[preIndex];
+                    preIndex -= gap;
                 }
+                array[preIndex + gap] = temp;
             }
-        } while (increasement > 1);
+            gap /= 2;
+        }
+        return array;
     }
 }

@@ -32,27 +32,27 @@ public class 选择排序 {
 
 
     // 选择排序
-    void SelectionSort(int arr[], int length)
-    {
-        for (int i = 0; i < length; i++)
-        {
-            int index = i;
-            for (int j = i+1; j < length; j++)
-            {
-                if (arr[j] < arr[index])
-                {
-                    index = j;
-                }
+
+    /**
+     * 选择排序
+     *
+     * @param array
+     * @return
+     */
+    public static int[] selectionSort(int[] array) {
+        if (array.length == 0)
+            return array;
+        for (int i = 0; i < array.length; i++) {
+            int minIndex = i;
+            for (int j = i; j < array.length; j++) {
+                if (array[j] < array[minIndex]) //找到最小的数
+                    minIndex = j; //将最小数的索引保存
             }
-            if (index == i)
-                continue;
-            else
-            {
-                int temp;
-                temp = arr[index];
-                arr[index] = arr[i];
-                arr[i] = temp;
-            }
+            int temp = array[minIndex];
+            array[minIndex] = array[i];
+            array[i] = temp;
         }
+        return array;
+
     }
 }
