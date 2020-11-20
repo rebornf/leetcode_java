@@ -8,5 +8,4 @@ package JUC.Design.Collections; /**
  * @Date 2020/10/13 16:36
  * @Version V1.0
  **/
-public class Threadest {
-}
+
