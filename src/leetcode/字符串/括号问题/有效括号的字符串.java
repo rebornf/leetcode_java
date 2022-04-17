@@ -103,11 +103,13 @@ class Solution {
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (c == '(') left.push(i);
-            else if (c == '*') star.push(i);
-            else {
+            else if (c == '*') {
+                star.push(i);
+            } else {
                 if (!left.isEmpty()) left.pop();
-                else if (!star.isEmpty()) star.pop();
-                else return false;
+                else if (!star.isEmpty()) {
+                    star.pop();
+                } else return false;
             }
         }
 

@@ -60,4 +60,5 @@ public class 括号配对 {
         括号配对 kh = new 括号配对();
         kh.check(str);
     }
+
 }
