@@ -51,4 +51,6 @@ public class ArrayNumsFindIndex {
       int[] resultNum = arrayNumsFindIndex.searchRange(testNums,8);
         System.out.println(Arrays.toString(resultNum));
     }
+
+
 }

@@ -1,7 +1,11 @@
 package leetcode.岛屿;
 
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @Author fty
@@ -60,6 +64,9 @@ public class 岛屿数量200 {
         int count = numIslands(grid);
 
         System.out.print(count);
+
+        List<String> list = new CopyOnWriteArrayList<>();
+        Set<String> stringSet = new HashSet<>();
 
 
     }
