@@ -11,7 +11,7 @@ package leetcode.数组;
 import com.sun.corba.se.impl.naming.cosnaming.NamingUtils;
 
 /**
- * 乘积最大子数组
+ * 乘积最大子数组  leetocode 第152题
  */
 public class MaxProduct {
     
@@ -27,5 +27,13 @@ public class MaxProduct {
             }
         }
         return 0 ;
+    }
+
+    /**
+     *进行参数的校验，我的少女然，我永远爱你啊，
+     * @param args
+     */
+    public static void main(String[] args) {
+        Integer  num  = 0 ;
     }
 }
