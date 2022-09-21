@@ -11,9 +11,20 @@ import java.util.*;
 public class 二叉树的中序遍历94 {
     public static void main(String[] args) {
 
+       TreeNode root = null;
+        
 
+        二叉树的中序遍历94 二叉树的中序遍历94 = new 二叉树的中序遍历94();
+        List<Integer> list = 二叉树的中序遍历94.inorderTravesal2(root);
+        System.out.println(list);
     }
 
+
+    /**
+     * 中序遍历，迭代法
+     * @param root
+     * @return
+     */
     public List<Integer> inorderTravesal(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
@@ -31,7 +42,25 @@ public class 二叉树的中序遍历94 {
         return res;
     }
 
-    public class TreeNode {
+    public List<Integer> inorderTravesal2(TreeNode root){
+        List<Integer> res = new ArrayList<>();
+        inorder(root,res);
+        return res ;
+    }
+
+    /**
+     * 中序遍历
+     */
+    public void inorder(TreeNode treeNode ,List<Integer> res){
+        if (treeNode == null) {
+            return;
+        }
+        inorder(treeNode.left,res);
+        res.add(treeNode.val);
+        inorder(treeNode.right,res);
+    }
+
+    public static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
