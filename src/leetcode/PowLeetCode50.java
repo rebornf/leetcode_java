@@ -1,5 +1,7 @@
 package leetcode;
 
+
+
 /**
  * @author fengtianyu
  * @version 1.0
@@ -9,9 +11,50 @@ package leetcode;
 public class PowLeetCode50 {
 
 
+    /**
+     * 暴力法 ，时间复杂度 O(N) ,空间复杂度 O(1);
+     * @param x
+     * @param n
+     * @return
+     */
+    public static  double reforceMyPow(double x ,int n) {
+        long N = n ;
+        if (N < 0){
+            x = 1/x ;
+            N = -N ;
+        }
+        double ans = 1 ;
+        for (int i = 0 ;i < n ;i ++){
+            ans = ans * x;
+        }
+        return ans ;
+
+    }
+
+
    public static  double getPow(double x , int n){
-         long N = n ;
-         return N >= 0 ? quickMul(x,N) : 1.0 /quickMul(x ,-N);
+         if ( n == 1 ){
+             return x ;
+         }
+         if (n % 2 != 0){
+             double half = getPow(x , n/2);
+             return half * half * x ;
+         }else {
+             double half = getPow(x,n/2);
+             return half * half ;
+         }
+   }
+
+
+
+   static double myPow(double x, int n){
+        if ( n == 0  || x == 1){
+            return  1 ;
+        }
+        if (n < 0){
+            return 1/getPow(x,n);
+        }
+        return getPow(x,n);
    }
 
    public static  double quickMul(double x ,long N){
@@ -28,18 +71,18 @@ public class PowLeetCode50 {
        return  result ;
 
    }
-//result
-//    public static void main(String[] args) {
-//       double c = quickMul(2.0000,10);
-//        System.out.println(c);
-//    }
 
     public static void main(String[] args) {
-        int n=3;
-        int result = sum(n);
-        System.out.println(result);
-
+       double c = myPow(2.0000,10);
+        System.out.println(c);
     }
+
+//    public static void main(String[] args) {
+//        int n=3;
+//        int result = sum(n);
+//        System.out.println(result);
+//
+//    }
 
     public static int sum(int n) {
         if(n==1) {
