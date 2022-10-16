@@ -44,10 +44,12 @@ public class ThreeSumNum15 {
                     list.add(nums[left]);
                     list.add(nums[right]);
                     resultList.add(list);
+
+                    //左指针去重
                     while (left < right && nums[left] == nums[left+1]){
                         left ++ ;
                     }
-
+                    //右指针去重
                     while (left < right && nums[right] == nums[right-1]){
                         right -- ;
                     }
